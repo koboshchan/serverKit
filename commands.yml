@@ -1,0 +1,43 @@
+command-block-overrides: []
+ignore-vanilla-permissions: false
+aliases:
+  icanhasbukkit:
+  - version $1-
+  sell:
+  - guishop:sell $1-
+  shop:
+  - guishop:shop $1-
+  esellall:
+  - essentials:sell all $1-
+  home:
+  - huskhomes:home $1-
+  sethome:
+  - huskhomes:sethome $1-
+  delhome:
+  - huskhomes:delhome $1-
+  edithome:
+  - huskhomes:edithome $1-
+  homelist:
+  - huskhomes:homelist $1-
+  homes:
+  - huskhomes:homes $1-
+  setspawn:
+  - huskhomes:setspawn $1-
+  spawn:
+  - huskhomes:spawn $1-
+  tpa:
+  - huskhomes:tpa $1-
+  tpahere:
+  - huskhomes:tpahere $1-
+  tpaccept:
+  - huskhomes:tpaccept $1-
+  tpdecline:
+  - huskhomes:tpdecline $1-
+  tpdeny:
+  - huskhomes:tpdecline $1-
+  tpcancel:
+  - huskhomes:tpcancel $1-
+  rtp:
+  - huskhomes:rtp $1-
+  tpignore:
+  - huskhomes:tpignore $1-

@@ -1,0 +1,58 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    environment:
+      EULA: "TRUE"
+      TYPE: "FOLIA"
+      FOLIA_DOWNLOAD_URL: "https://github.com/koboshchan/Folia/releases/download/1.21.11/folia-paperclip-1.21.11-mojmap.jar"
+      VERSION: "1.21.11"
+      TZ: "Europe/London"
+      MEMORY: "12G"
+      USE_AIKAR_FLAGS: "true"
+      ONLINE_MODE: "false"
+      PATCH_DEFINITIONS: /patch.json
+      CFG_VELOCITY_SECRET_FILE: /velocity-secret
+      MODS: |-
+        https://cdn.modrinth.com/data/Cz6msz34/versions/rSHiNcdQ/AxGraves-1.28.0.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/nZSk44a8/versions/8m3fnHbw/AxTrade-1.24.1.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/2ejTGiXt/versions/vFLjBqGZ/AxSellwands-1.14.1.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/fALzjamp/versions/P3y2MXnd/Chunky-Bukkit-1.4.40.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/U3Q9GAst/versions/OU6J79i3/CrazyAuctions-1.7.0.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://github.com/Euphillya/Essentials-Folia/releases/download/build-folia-patches-92/EssentialsX-2.22.0-dev+129-aa99243-Folia.jar
+        https://cdn.modrinth.com/data/bvAxQ8dW/versions/QNkHfzyT/GUIShop-9.4.3c.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/7RaS2huo/versions/k0suZm7T/HeadDrop-Free.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/J6U9o3JG/versions/2ajgSi5J/HuskHomes-Paper-4.10-089d883.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/wGTbjSTq/versions/k16NYAYF/knockbacksync-bukkit-1.3.6-dev-b136.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://ci.lucko.me/job/LuckPerms-Folia/13/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.5.43.jar
+        https://cdn.modrinth.com/data/XRJBgd3p/versions/4AKkSJCL/NoChatReports-2.7.7.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/lKEzGugV/versions/UmbIiI5H/PlaceholderAPI-2.12.2.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://github.com/dmulloy2/ProtocolLib/releases/download/5.4.0/ProtocolLib.jar
+        https://cdn.modrinth.com/data/TsLS8Py5/versions/2PjHGlwd/SkinsRestorer.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/U6d1TJQm/versions/padTtIq6/StringDupersReturn-1.0.12.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/gG7VFbG0/versions/FewsxQmS/TAB%20v6.0.2%20-%20Vanilla.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/ayRaM8J7/versions/ypDodbNn/VaultUnlocked-2.19.1.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/OhduvhIc/versions/xyKcAltm/veinminer-paper-2.6.0.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/4sP0LXxp/versions/UlNmwSGT/veinminer-enchant-2.6.1.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/P1OZGk5p/versions/bpOs8Bc5/ViaVersion-5.9.2-SNAPSHOT.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/NpvuJQoq/versions/an2egx81/ViaBackwards-5.9.2-SNAPSHOT.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/1u6JkXh5/versions/yDUBafTJ/worldedit-bukkit-7.4.3.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/DKY9btbd/versions/EZl3moba/worldguard-bukkit-7.0.16.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        https://cdn.modrinth.com/data/LJNGWSvH/versions/I5HznU6X/grimac-bukkit-2.3.74-e32d091.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+
+        https://cdn.modrinth.com/data/iU5kx4FN/versions/NN4d96mq/Quests-3.16.1-430c34a.jar?mr_download_reason=standalone&mr_game_version=1.21.10&mr_loader=folia
+        https://github.com/koboshchan/Cardinal/releases/latest/download/Cardinal.jar
+    volumes:
+      - ./data:/data:rw
+      - ./patch.json:/patch.json:ro
+      - ./forwarding.secret:/velocity-secret:ro
+      - ./commands.yml:/data/commands.yml:ro
+      
+    # networks:
+    #   - onemcserver_bridge
+# networks:
+#   onemcserver_bridge:
+#     external: true

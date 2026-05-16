@@ -1,0 +1,174 @@
+{
+  "patches": [
+    {
+      "file": "/data/bukkit.yml",
+      "ops": [
+        {
+          "$set": {
+            "path": "$.settings['connection-throttle']",
+            "value": 150,
+            "value-type": "int"
+          }
+        }
+      ]
+    },
+    {
+      "file": "/data/config/paper-global.yml",
+      "ops": [
+        {
+          "$set": {
+            "path": "$.proxies.velocity.enabled",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$.proxies.velocity['online-mode']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$.proxies.velocity.secret",
+            "value": "${CFG_VELOCITY_SECRET}"
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['allow-headless-pistons']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['allow-permanent-block-break-exploits']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['allow-piston-duplication']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['allow-unsafe-end-portal-teleportation']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['compression-format']",
+            "value": "ZLIB"
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['oversized-item-component-sanitizer']['dont-sanitize']",
+            "value": []
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['perform-username-validation']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['skip-tripwire-hook-placement-validation']",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['skip-vanilla-damage-tick-when-shield-blocked']",
+            "value": false
+          }
+        },
+        {
+          "$set": {
+            "path": "$['unsupported-settings']['update-equipment-on-player-actions']",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "file": "/data/config/paper-world-defaults.yml",
+      "ops": [
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray'].enabled",
+            "value": true
+          }
+        },
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray']['engine-mode']",
+            "value": 2
+          }
+        },
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray']['lava-obscures']",
+            "value": false
+          }
+        },
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray']['max-block-height']",
+            "value": 64
+          }
+        },
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray']['replacement-blocks']",
+            "value": [
+              "stone",
+              "deepslate"
+            ]
+          }
+        },
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray']['update-radius']",
+            "value": 2
+          }
+        },
+        {
+          "$set": {
+            "path": "$.anticheat['anti-xray']['use-permission']",
+            "value": false
+          }
+        },
+        {
+          "$set": {
+            "path": "$.misc['redstone-implementation']",
+            "value": "ALTERNATE_CURRENT"
+          }
+        }
+      ]
+    },
+    {
+        "file":"/data/spigot.yml",
+        "ops":[
+            {
+                "$set":{
+                    "path":"$.commands['spam-exclusions']",
+                    "value":[
+                        "/esellall"
+                    ]
+                }
+            },
+            {
+              "$set":{
+                "path":"$.commands['enable-spam-exclusions']",
+                "value":false
+              }
+            }
+        ]
+    }
+  ]
+}
