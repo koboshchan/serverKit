@@ -53,7 +53,8 @@ services:
         https://cdn.modrinth.com/data/DKY9btbd/versions/EZl3moba/worldguard-bukkit-7.0.16.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
         https://cdn.modrinth.com/data/LJNGWSvH/versions/I5HznU6X/grimac-bukkit-2.3.74-e32d091.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
         https://github.com/koboshchan/Clumps-Plugin/releases/download/6.0/Clumps.jar
-
+        https://cdn.modrinth.com/data/VCAqN1ln/versions/bQdkcmPY/Maintenance-Paper-5.0.0.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=folia
+        
         https://cdn.modrinth.com/data/iU5kx4FN/versions/NN4d96mq/Quests-3.16.1-430c34a.jar?mr_download_reason=standalone&mr_game_version=1.21.10&mr_loader=folia
         https://github.com/koboshchan/Cardinal/releases/latest/download/Cardinal.jar
     volumes:
