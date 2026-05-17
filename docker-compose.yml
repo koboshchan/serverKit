@@ -1,22 +1,22 @@
 services:
   minecraft:
-    image: itzg/minecraft-server:latest
+    image: itzg/minecraft-server:java25-jdk
     container_name: minecraft
     restart: unless-stopped
     tty: true
     stdin_open: true
-    ports:
-      - "25565:25565"
+    # recommended to have at least 16 cpu cores (not threads).
     deploy:
       resources:
         limits:
-          cpus: '10'
+          cpus: '16'
     environment:
       EULA: "TRUE"
       TYPE: "FOLIA"
-      FOLIA_DOWNLOAD_URL: "https://github.com/koboshchan/Folia/releases/download/1.21.11/folia-paperclip-1.21.11-mojmap.jar"
+      FOLIA_DOWNLOAD_URL: https://github.com/koboshchan/Folia/releases/download/1.21.11/folia-paperclip-1.21.11-mojmap.jar
       VERSION: "1.21.11"
       TZ: "Europe/London"
+      # recommended to have at least 12gb of memory allocated. minimum recommended is 8gb.
       MEMORY: "12G"
       USE_AIKAR_FLAGS: "true"
       ONLINE_MODE: "false"
@@ -56,8 +56,12 @@ services:
       - ./data:/data:rw
       - ./patch.json:/patch.json:ro
       - ./forwarding.secret:/velocity-secret:ro
-      - ./commands.yml:/data/commands.yml:ro
+      - ./lp.json.gz:/data/plugins/LuckPerms/lp.json.gz:ro
 
+    
+    ports:
+      - "25565:25565"
+    # uncomment if you want to use a custom network with proxy.
     # networks:
     #   - onemcserver_bridge
 # networks:

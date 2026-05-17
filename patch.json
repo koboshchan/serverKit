@@ -18,7 +18,7 @@
         {
           "$set": {
             "path": "$.proxies.velocity.enabled",
-            "value": true
+            "value": false
           }
         },
         {
@@ -59,37 +59,7 @@
         },
         {
           "$set": {
-            "path": "$['unsupported-settings']['compression-format']",
-            "value": "ZLIB"
-          }
-        },
-        {
-          "$set": {
-            "path": "$['unsupported-settings']['oversized-item-component-sanitizer']['dont-sanitize']",
-            "value": []
-          }
-        },
-        {
-          "$set": {
-            "path": "$['unsupported-settings']['perform-username-validation']",
-            "value": true
-          }
-        },
-        {
-          "$set": {
             "path": "$['unsupported-settings']['skip-tripwire-hook-placement-validation']",
-            "value": true
-          }
-        },
-        {
-          "$set": {
-            "path": "$['unsupported-settings']['skip-vanilla-damage-tick-when-shield-blocked']",
-            "value": false
-          }
-        },
-        {
-          "$set": {
-            "path": "$['unsupported-settings']['update-equipment-on-player-actions']",
             "value": true
           }
         }
@@ -152,23 +122,107 @@
       ]
     },
     {
-        "file":"/data/spigot.yml",
-        "ops":[
-            {
-                "$set":{
-                    "path":"$.commands['spam-exclusions']",
-                    "value":[
-                        "/esellall"
-                    ]
-                }
-            },
-            {
-              "$set":{
-                "path":"$.commands['enable-spam-exclusions']",
-                "value":false
-              }
+      "file": "/data/spigot.yml",
+      "ops": [
+        {
+          "$set": {
+            "path": "$.commands['spam-exclusions']",
+            "value": [
+              "/esellall"
+            ]
+          }
+        },
+        {
+          "$set": {
+            "path": "$.commands['enable-spam-exclusions']",
+            "value": false
+          }
+        }
+      ]
+    },
+    {
+      "file": "/data/commands.yml",
+      "ops": [
+        {
+          "$set": {
+            "path": "$.command-block-overrides",
+            "value": []
+          }
+        },
+        {
+          "$set": {
+            "path": "$.ignore-vanilla-permissions",
+            "value": false
+          }
+        },
+        {
+          "$set": {
+            "path": "$.aliases",
+            "value": {
+              "icanhasbukkit": [
+                "version $1-"
+              ],
+              "sell": [
+                "guishop:sell $1-"
+              ],
+              "shop": [
+                "guishop:shop $1-"
+              ],
+              "esellall": [
+                "essentials:sell all $1-"
+              ],
+              "home": [
+                "huskhomes:home $1-"
+              ],
+              "sethome": [
+                "huskhomes:sethome $1-"
+              ],
+              "delhome": [
+                "huskhomes:delhome $1-"
+              ],
+              "edithome": [
+                "huskhomes:edithome $1-"
+              ],
+              "homelist": [
+                "huskhomes:homelist $1-"
+              ],
+              "homes": [
+                "huskhomes:homes $1-"
+              ],
+              "setspawn": [
+                "huskhomes:setspawn $1-"
+              ],
+              "spawn": [
+                "huskhomes:spawn $1-"
+              ],
+              "tpa": [
+                "huskhomes:tpa $1-"
+              ],
+              "tpahere": [
+                "huskhomes:tpahere $1-"
+              ],
+              "tpaccept": [
+                "huskhomes:tpaccept $1-"
+              ],
+              "tpdecline": [
+                "huskhomes:tpdecline $1-"
+              ],
+              "tpdeny": [
+                "huskhomes:tpdecline $1-"
+              ],
+              "tpcancel": [
+                "huskhomes:tpcancel $1-"
+              ],
+              "rtp": [
+                "huskhomes:rtp $1-"
+              ],
+              "tpignore": [
+                "huskhomes:tpignore $1-"
+              ]
             }
-        ]
+          }
+        }
+      ]
     }
   ]
 }
