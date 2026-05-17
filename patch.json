@@ -18,13 +18,15 @@
         {
           "$set": {
             "path": "$.proxies.velocity.enabled",
-            "value": false
+            "value": "${USING_VELOCITY}",
+            "value-type": "bool"
           }
         },
         {
           "$set": {
             "path": "$.proxies.velocity['online-mode']",
-            "value": true
+            "value": "${VELOCITY_ONLINE_MODE}",
+            "value-type": "bool"
           }
         },
         {

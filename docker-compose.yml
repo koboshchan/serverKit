@@ -20,6 +20,10 @@ services:
       MEMORY: "12G"
       USE_AIKAR_FLAGS: "true"
       ONLINE_MODE: "false"
+      # if you want to use velocity, set this to true and add the forwarding secret file
+      USING_VELOCITY: "true"
+      # set this to save as your velocity config
+      VELOCITY_ONLINE_MODE: "true"
       PATCH_DEFINITIONS: /patch.json
       CFG_VELOCITY_SECRET_FILE: /velocity-secret
       MODS: |-
