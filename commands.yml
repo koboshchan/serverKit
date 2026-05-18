@@ -45,9 +45,9 @@ aliases:
   - huskhomes:tpdecline $1-
   tpdeny:
   - huskhomes:tpdecline $1-
-  tpcancel:
-  - huskhomes:tpcancel $1-
   rtp:
   - huskhomes:rtp $1-
   tpignore:
   - huskhomes:tpignore $1-
+  back:
+  - huskhomes:back $1-
