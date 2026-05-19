@@ -13,7 +13,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "FOLIA"
-      FOLIA_DOWNLOAD_URL: https://github.com/koboshchan/Folia/releases/download/1.21.11/folia-paperclip-1.21.11-mojmap.jar
+      FOLIA_DOWNLOAD_URL: https://github.com/koboshchan/KoboshFolia/releases/latest/download/koboshfolia-server-1.21.11.jar
       VERSION: "1.21.11"
       TZ: "Europe/London"
       # recommended to have at least 12gb of memory allocated. minimum recommended is 8gb.
